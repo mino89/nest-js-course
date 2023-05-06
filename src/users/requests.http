@@ -1,0 +1,36 @@
+### Signup Request
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "asdaas34@asd.it",
+  "password": "asdfasdf",
+  "admin": true
+}
+
+### Signin Request
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "asdaas34@asd.it",
+  "password": "asdfasdf",
+  "admin": true
+}
+
+### Find particular user
+GET http://localhost:3000/auth/10
+
+### Fuind all users with matching email
+GET http://localhost:3000/auth?email=asdaas@asd.it
+
+### Delete user with given id
+DELETE http://localhost:3000/auth/1
+
+### Update a user
+PATCH http://localhost:3000/auth/22
+Content-Type: application/json
+
+{
+  "password": "aaa"
+}
