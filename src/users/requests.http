@@ -15,8 +15,8 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "email": "asdaas3456@asd.it",
-  "password": "asdfasdf",
+  "email": "email@test.it",
+  "password": "1234",
   "admin": true
 }
 ### Sign Out
