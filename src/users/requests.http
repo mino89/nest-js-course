@@ -3,10 +3,10 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "email@test.it",
-  "password": "1234",
-  "admin": true
+  "email": "emailxxx@test.it",
+  "password": "1234"
 }
+
 ### Get the currently signed in user
 GET http://localhost:3000/auth/whoami
 
@@ -15,10 +15,10 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "email": "email@test.it",
-  "password": "1234",
-  "admin": true
+  "email": "emailxxx@test.it",
+  "password": "1234"
 }
+
 ### Sign Out
 POST http://localhost:3000/auth/signout
 ### Find particular user
