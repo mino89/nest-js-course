@@ -20,7 +20,13 @@ export class ReportsController {
   getList(){
     return this.repotrsService.getList()
   }
-  
+
+  @Get('/:id')
+  @UseGuards(AuthGuard)
+    getReport(@Param('id') id: string){
+      return this.repotrsService.getReport(id)
+    }
+    
   @Get('/getestimate')
   getEstimate(@Query() query: GetEstimateDto){
     return this.repotrsService.createEstimate(query)

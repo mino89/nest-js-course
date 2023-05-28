@@ -21,6 +21,19 @@ export class ReportsService {
       }
     })
   }
+
+  // get a single report and return only the fields make, model, year
+  async getReport(id: string) { 
+    const report = await this.repo.findOne({
+      where: { id: parseInt(id) },
+      select: ['id', 'make', 'model', 'year']
+    })
+    if(!report){  
+      throw new NotFoundException('report not found')
+    } 
+    return report
+  }
+
   create(reportDto: CreateReportDto, user: User) {
     const report = this.repo.create(reportDto)
     report.user = user
@@ -48,4 +61,7 @@ export class ReportsService {
       .limit(3)
       .getRawOne()
   }
+
+  
+
 }

@@ -9,7 +9,8 @@ Content-Type: application/json
   "lng":45,
   "lat":45,
   "mileage":50000,
-  "price": 20000
+  "price": 20000,
+  "approved":true
 }
 
 ### Approve an existing report
@@ -22,6 +23,9 @@ Content-Type: application/json
 
 ### Get an estimate for existing vehicle
 GET http://localhost:3000/reports/getestimate?make=ford&model=mustang&lat=45&lng=45&mileage=200&year=1981
+
+### Get a single vehicle
+GET http://localhost:3000/reports/23
 
 ### Get a list of all vehichles
 GET http://localhost:3000/reports
